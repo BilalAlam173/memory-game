@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <style>
+      .overlay {
+        box-shadow: 0 0 0 100px inset, 0 0 5px grey;
+        transition: box-shadow 1s;
+      }
+
+      .overlay::after {
+        content: "?";
+        width: 80%;
+        height: 80%;
+        display: block;
+        white-space: pre;
+        font: 15pt "sigmar one";
+        color: white;
+        border: 2px solid;
+        text-align: center;
+        /* center content using flex box */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* hover out transition */
+        transition: opacity 1s 0.5s;
+        margin: 8px;
+        cursor: pointer;
+      }
+      .overlay:hover {
+        color: rgba(71, 121, 94, 1);;
+      }
+
+      .checked {
+        color: green;
+      }
+
+      .boxWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 380px;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="./index.js"></script>
+  </body>
+</html>
